@@ -1,12 +1,12 @@
 {
     "waves": [
         {
-            "code": "today-twiliosms-1",
-            "name": "random_sms",
-            "notes": null,
+            "code": "craving_mood_baseline",
+            "name": "Craving and mood baseline",
+            "notes": "wake+1h<=>wake+3h, wake+3h<=>wake+5h, wake+5h<=>wake+7h, wake+7h<=>wake+9h, wake+9h<=>wake+11h, wake+11h<=>wake+13h",
             "isActive": true,
             "isAutoEnrollOnRegistration": true,
-            "isSelfEnrolled": false,
+            "canEnroll": true,
             "isAutoApproveEnrollment": false,
             "isAutoSchedule": true,
             "scheduleOffset": null,
@@ -24,11 +24,11 @@
             "fieldWorkerList": null,
             "cluster": null,
             "sqlFilter": null,
-            "importOffset": null,
+            "importOffset": 0,
             "chunkSize": 25,
             "estimatedTaskCount": null,
             "queueFrequency": 0,
-            "taskCount": 6,
+            "taskCount": 4,
             "mobilityPreference": null,
             "routing": [],
             "routeTime": null,
@@ -40,11 +40,11 @@
             "publishLimit": null,
             "minRepetitions": null,
             "maxRepetitions": null,
-            "assignmentCount": null,
+            "assignmentCount": 27,
             "reward": null,
             "canTurkFurther": false,
             "qualificationsText": null,
-            "duration": 1,
+            "duration": 14,
             "scheduleConfiguration": "wake+1h<=>wake+3h, wake+3h<=>wake+5h, wake+5h<=>wake+7h, wake+7h<=>wake+9h, wake+9h<=>wake+11h, wake+11h<=>wake+13h",
             "subscaleSummary": [],
             "turkDeployment": "production",
@@ -59,6 +59,10 @@
             "isDeidentifiedNotification": false,
             "sendWelcomeMessage": true,
             "welcomeMessage": "You will receive a short survey 6 times per day, roughly every two hours. Please answer these as quickly as possible.",
+            "sendEndMessage": true,
+            "endMessage": "Thank you. Your completion score for this survey is {{assignRepo.scheduledSmsScore(participant)}}%",
+            "sendTaskEndMessage": true,
+            "taskEndMessage": "This survey is now complete and you will not be receiving any more prompts. Thank you! Your final score for this survey is {{assignRepo.scheduledSmsScore(task) }}%",
             "notificationMessage": null,
             "defaultScore": null,
             "workerCount": null,
@@ -84,7 +88,6 @@
             "surveyExpiration": 30,
             "surveyExpirationResponse": 5,
             "reminderFrequency": 1,
-            "endMessage": "Thanks.",
             "prefix": null,
             "startMessage": null,
             "renameTemplate": null,
@@ -102,8 +105,12 @@
             "scheduleConditions": null,
             "trackQueue": null,
             "messageQueue": null,
-            "id": 317,
-            "projectCode": "geoscan",
+            "id": 54,
+            "sendExpirationMessage": true,
+            "marking": "active",
+            "moduleCode": "ongoing",
+            "channelCode": "random_channel",
+            "projectCode": "blitz1",
             "surveyCode": "random_craving"
         }
     ],
@@ -113,7 +120,7 @@
         "hasHelpImages": false,
         "replacements": [],
         "repeatMax": 1,
-        "id": 407,
+        "id": 46,
         "questions": [
             {
                 "code": "craving",
@@ -162,11 +169,9 @@
                 "includeCondition": ""
             }
         ],
-        "marking": [],
         "moduleCode": "ongoing",
         "subscales": [],
         "consensus": false,
-        "markingDisplay": "",
         "showHelpImages": true
     }
 }
